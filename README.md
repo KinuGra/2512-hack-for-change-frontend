@@ -1,3 +1,11 @@
+# 環境構築
+
+```
+git clone {repo}
+pnpm install
+pnpm run dev
+```
+
 # プロジェクト作成
 
 ```
