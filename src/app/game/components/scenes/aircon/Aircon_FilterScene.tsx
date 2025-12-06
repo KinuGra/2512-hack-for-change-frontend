@@ -26,7 +26,7 @@ export default function Aircon_FilterScene({
             delta > 0 ? "/images/farmerImpact/good_farmer.png" : "/images/farmerImpact/worst_farmer.png"
         );
         if (endSituation) {
-            setTimeout(() => endSituation(), 1000);
+            setTimeout(() => endSituation(), SCENE_TRANSITION_DELAY);
         }
     };
 
