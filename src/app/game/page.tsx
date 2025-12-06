@@ -1,7 +1,9 @@
+import MilkShelf from "./components/scenes/milk/milkScene";
+
 export default function GamePage() {
   return (
     <>
-      <div>game</div>
+      <MilkShelf />
     </>
   );
 }

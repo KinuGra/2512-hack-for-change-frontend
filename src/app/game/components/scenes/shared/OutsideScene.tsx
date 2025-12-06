@@ -1,5 +1,5 @@
-import Situation from "../Situation";
-import TouchButton from "../TouchButton";
+import Situation from "../../Situation";
+import TouchButton from "../../TouchButton";
 export default function OutsideScene() {
   return (
     <>
