@@ -7,7 +7,9 @@ import { MainMenu } from "./components/MainMenu";
 
 export default function Home() {
   // 画面遷移などのロジック
-  const handleStart = () => console.log("Start Game");
+  const handleStart = () => {
+    window.location.href = "/game";
+  };
   const handleContinue = () => console.log("Continue Game");
 
   return (

@@ -3,6 +3,7 @@
     top: 20px;
     right: 20px;
     display: flex;
+    z-index: 10;
     align-items: center;
     justify-content: space-between;
 
@@ -74,4 +75,21 @@
     height: 40px;
     color: #5f701e;
     /* 文字より少し濃いオリーブ */
+}
+
+@media (max-width: 800px) {
+    .card {
+        top: 10px;
+        right: 10px;
+        transform-origin: top right;
+        transform: scale(0.7);
+        width: 300px;
+        /* Keep original width but scale down */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        transform: scale(0.6);
+    }
 }
