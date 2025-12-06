@@ -1,0 +1,23 @@
+.background {
+  background-color: #697e2c;
+  width: 100%;
+  min-height: 100vh;
+  background-image: var(--bg-img);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* 使い方の例 */
+/* import "@/app/game/components/scenes/backgroundImage.css"; */
+/* export default function Home() { */
+/*   const imagePath = "/images/shared/hoge.png"; */
+/*   return ( */
+/*     <> */
+/*       <div */
+/*         className="background" */
+/*         style={{ "--bg-img": `url(${imagePath})` } as React.CSSProperties} */
+/*       /> */
+/*     </> */
+/*   ); */
+/* } */
