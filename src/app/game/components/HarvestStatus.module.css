@@ -1,14 +1,15 @@
 .card {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: clamp(12px, 3vw, 20px);
+    right: clamp(12px, 3vw, 20px);
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    /* カード全体のサイズ感（必要に応じて親要素で調整してください） */
-    width: 300px;
-    padding: 24px 32px;
+    /* ビューポートに応じて縮む／広がる */
+    /* 140px まで縮めて小さな画面でも収まるようにする */
+    width: clamp(140px, 26vw, 320px);
+    padding: clamp(10px, 2.6vw, 24px) clamp(14px, 3vw, 32px);
 
     /* 画像のようなクリーム色の背景と枠線 */
     background-color: #fdfcf8;
@@ -20,6 +21,8 @@
     font-family:
         -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
         Arial, sans-serif;
+
+    transition: transform 0.2s ease;
 }
 
 .infoContainer {
@@ -29,7 +32,7 @@
 }
 
 .label {
-    font-size: 16px;
+    font-size: clamp(11px, 1.6vw, 16px);
     font-weight: 500;
     color: #8a857b;
     /* グレーがかったブラウン */
@@ -47,12 +50,12 @@
 }
 
 .scoreValue {
-    font-size: 56px;
+    font-size: clamp(26px, 5vw, 56px);
     line-height: 1;
 }
 
 .unit {
-    font-size: 32px;
+    font-size: clamp(14px, 2.6vw, 32px);
     margin-left: 2px;
 }
 
@@ -61,8 +64,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80px;
-    height: 80px;
+    width: clamp(36px, 7vw, 80px);
+    height: clamp(36px, 7vw, 80px);
     background-color: #eef2e3;
     /* 薄い緑色 */
     border-radius: 50%;
@@ -70,8 +73,8 @@
 
 /* アイコン自体の色 */
 .icon {
-    width: 40px;
-    height: 40px;
+    width: clamp(18px, 3.2vw, 40px);
+    height: clamp(18px, 3.2vw, 40px);
     color: #5f701e;
     /* 文字より少し濃いオリーブ */
 }
