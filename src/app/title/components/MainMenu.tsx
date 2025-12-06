@@ -1,15 +1,14 @@
 import React from 'react';
-import { Play, BookOpen, Settings } from 'lucide-react';
+import { Play, BookOpen } from 'lucide-react';
 import { MenuButton } from './MenuButton';
 import styles from '../page.module.css';
 
 interface MainMenuProps {
     onStart: () => void;
     onContinue: () => void;
-    onOpenSettings: () => void;
 }
 
-export const MainMenu: React.FC<MainMenuProps> = ({ onStart, onContinue, onOpenSettings }) => {
+export const MainMenu: React.FC<MainMenuProps> = ({ onStart, onContinue }) => {
     return (
         <div className={styles.menuSection}>
             <MenuButton
