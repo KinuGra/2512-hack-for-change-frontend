@@ -1,0 +1,146 @@
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* カード全体のサイズ感（必要に応じて親要素で調整してください） */
+    width: 300px;
+    padding: 24px 32px;
+
+    /* 画像のようなクリーム色の背景と枠線 */
+    background-color: #FDFCF8;
+    border: 4px solid #EBE6DC;
+    border-radius: 32px;
+
+    /* ほんのり影をつけて立体感を出す */
+    box-shadow: 0 4px 10px rgba(180, 170, 150, 0.15);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #8A857B;
+    /* グレーがかったブラウン */
+    margin-bottom: 4px;
+    letter-spacing: 0.05em;
+}
+
+.scoreWrapper {
+    display: flex;
+
+    .card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        /* カード全体のサイズ感（必要に応じて親要素で調整してください） */
+        width: 300px;
+        padding: 24px 32px;
+
+        /* 画像のようなクリーム色の背景と枠線 */
+        background-color: #FDFCF8;
+        border: 4px solid #EBE6DC;
+        border-radius: 32px;
+
+        /* ほんのり影をつけて立体感を出す */
+        box-shadow: 0 4px 10px rgba(180, 170, 150, 0.15);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .infoContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .label {
+        font-size: 16px;
+        font-weight: 500;
+        color: #8A857B;
+        /* グレーがかったブラウン */
+        margin-bottom: 4px;
+        letter-spacing: 0.05em;
+    }
+
+    .scoreWrapper {
+        display: flex;
+        align-items: baseline;
+        color: #6C7A28;
+        /* 特徴的なオリーブグリーン */
+        font-weight: 800;
+        /* かなり太めのフォント */
+    }
+
+    .scoreValue {
+        font-size: 56px;
+        line-height: 1;
+    }
+
+    .unit {
+        font-size: 32px;
+        margin-left: 2px;
+    }
+
+    /* アイコン周りの丸い背景 */
+    .iconContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 80px;
+        background-color: #EEF2E3;
+        /* 薄い緑色 */
+        border-radius: 50%;
+    }
+
+    /* アイコン自体の色 */
+    .icon {
+        width: 40px;
+        height: 40px;
+        color: #5F701E;
+        /* 文字より少し濃いオリーブ */
+    }
+
+    align-items: baseline;
+    color: #6C7A28;
+    /* 特徴的なオリーブグリーン */
+    font-weight: 800;
+    /* かなり太めのフォント */
+}
+
+.scoreValue {
+    font-size: 56px;
+    line-height: 1;
+}
+
+.unit {
+    font-size: 32px;
+    margin-left: 2px;
+}
+
+/* アイコン周りの丸い背景 */
+.iconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: #EEF2E3;
+    /* 薄い緑色 */
+    border-radius: 50%;
+}
+
+/* アイコン自体の色 */
+.icon {
+    width: 40px;
+    height: 40px;
+    color: #5F701E;
+    /* 文字より少し濃いオリーブ */
+}
