@@ -1,0 +1,400 @@
+/* * === 色・共通設定 === 
+ * ここで定義した変数はファイル全体で使用します。
+ * 色を変更したい場合はこのセクションを編集するだけで全体に反映されます。
+ */
+.container {
+    /* カラーパレット定義 */
+    --color-bg: #F3F1E8;
+    /* 全体の背景色（ベージュ） */
+    --color-card-bg: #FCFAF5;
+    /* カードやボタンの背景色（白に近いベージュ） */
+    --color-primary: #8C9E5E;
+    /* メインのアクセントカラー（オリーブグリーン） */
+    --color-primary-dark: #7A8B4E;
+    /* ボタンホバー時などの濃い緑 */
+    --color-secondary: #5C6B3F;
+    /* 濃い文字やアイコン用の深緑 */
+    --color-text-main: #2D2D2D;
+    /* メインテキスト色（黒に近いグレー） */
+    --color-text-sub: #555555;
+    /* サブテキスト色（グレー） */
+    --color-border: #E0E0E0;
+    /* 境界線の色 */
+    --color-hover-bg: #F3F6EA;
+    /* ホバー時の薄い緑背景 */
+
+    min-height: 100vh;
+    background-color: var(--color-bg);
+    color: var(--color-text-main);
+    font-family: sans-serif;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    user-select: none;
+    overflow: hidden;
+}
+
+/* * === 背景装飾（アニメーション含む） === 
+ * 画面の賑やかし要素です。操作の邪魔にならないよう z-index: 0 にしています。
+ */
+.backgroundDecoration {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.2;
+}
+
+.leafIcon {
+    position: absolute;
+    color: var(--color-primary);
+}
+
+/* 個別の葉っぱの位置と角度調整 */
+.leaf1 {
+    top: 2.5rem;
+    left: 2.5rem;
+    width: 6rem;
+    height: 6rem;
+    transform: rotate(45deg);
+}
+
+.leaf2 {
+    bottom: 5rem;
+    right: 5rem;
+    width: 8rem;
+    height: 8rem;
+    transform: rotate(-12deg);
+}
+
+.leaf3 {
+    top: 33%;
+    right: 2.5rem;
+    width: 4rem;
+    height: 4rem;
+    transform: rotate(90deg);
+}
+
+/* ぼんやりとした光の玉 */
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+}
+
+.blob1 {
+    top: -10%;
+    left: 20%;
+    width: 16rem;
+    height: 16rem;
+    background-color: var(--color-primary);
+    opacity: 0.3;
+}
+
+.blob2 {
+    bottom: -10%;
+    right: 20%;
+    width: 20rem;
+    height: 20rem;
+    background-color: var(--color-secondary);
+    opacity: 0.2;
+}
+
+/* * === メインコンテンツレイアウト === 
+ * z-index: 10 で背景より手前に表示します。
+ */
+.contentWrapper {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 56rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    /* フェードインアニメーションの適用 */
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* タイトルエリア */
+.titleSection {
+    text-align: center;
+}
+
+.logoCircle {
+    width: 3rem;
+    height: 3rem;
+    background-color: #DDE2C6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.mainTitle {
+    font-size: 2.25rem;
+    font-weight: bold;
+    letter-spacing: -0.025em;
+    color: var(--color-text-main);
+    margin-bottom: 1rem;
+}
+
+.subTitle {
+    color: var(--color-text-sub);
+    font-size: 1.125rem;
+    font-weight: 500;
+    letter-spacing: 0.025em;
+}
+
+/* レスポンシブ対応（画面幅が広い場合） */
+@media (min-width: 768px) {
+    .mainTitle {
+        font-size: 3.75rem;
+    }
+
+    .subTitle {
+        font-size: 1.25rem;
+    }
+}
+
+/* * === メニューボタン === 
+ */
+.menuSection {
+    width: 100%;
+    max-width: 28rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.menuButton {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    background-color: var(--color-card-bg);
+    border: 2px solid transparent;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+.menuButton:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+/* 強調ボタン（はじめから）用のスタイル */
+.menuButtonPrimary {
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.menuButtonPrimary:hover {
+    background-color: var(--color-hover-bg);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.iconWrapper {
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    transition: background-color 0.3s;
+    background-color: var(--color-bg);
+    color: var(--color-secondary);
+}
+
+/* Primaryボタン内のアイコンは背景色を濃くする */
+.menuButtonPrimary .iconWrapper {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.menuButton:hover .iconWrapper {
+    background-color: #E8E6DD;
+}
+
+.menuButtonPrimary:hover .iconWrapper {
+    background-color: var(--color-primary);
+}
+
+.labelGroup {
+    text-align: left;
+    flex: 1;
+    margin-left: 1rem;
+}
+
+.buttonLabel {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: var(--color-text-main);
+}
+
+.buttonSubLabel {
+    font-size: 0.875rem;
+    color: #888888;
+    font-weight: 500;
+}
+
+/* ホバー時に出る矢印 */
+.arrowIcon {
+    opacity: 0;
+    transform: translateX(-0.5rem);
+    transition: all 0.3s;
+    color: #888888;
+}
+
+.menuButtonPrimary .arrowIcon {
+    color: var(--color-primary);
+}
+
+.menuButton:hover .arrowIcon {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* フッター */
+.footer {
+    position: absolute;
+    bottom: -6rem;
+    color: #888888;
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        bottom: -9rem;
+    }
+}
+
+/* * === 設定モーダル === 
+ */
+.modalOverlay {
+    position: absolute;
+    inset: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(45, 45, 45, 0.2);
+    backdrop-filter: blur(4px);
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+.modalContent {
+    background-color: var(--color-card-bg);
+    width: 100%;
+    max-width: 28rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.modalHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modalTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-text-main);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.closeButton {
+    padding: 0.5rem;
+    border-radius: 9999px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+
+.closeButton:hover {
+    background-color: var(--color-bg);
+}
+
+.settingItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.settingLabel {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text-sub);
+    font-weight: 500;
+}
+
+.volumeBarBg {
+    height: 0.5rem;
+    background-color: var(--color-border);
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.volumeBarFill {
+    height: 100%;
+    background-color: var(--color-primary);
+}
+
+.saveButton {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 0.75rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.saveButton:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* * === アニメーション定義 === 
+ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
