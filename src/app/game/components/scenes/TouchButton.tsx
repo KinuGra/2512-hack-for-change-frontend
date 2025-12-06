@@ -9,7 +9,7 @@ type TouchButtonProps = {
 export default function TouchButton({
   top,
   left,
-  icon = "/touch.png",
+  icon = "/images/shared/touch.png",
 }: TouchButtonProps) {
   return (
     <div className={styles.iconWrapper} style={{ top, left }}>
