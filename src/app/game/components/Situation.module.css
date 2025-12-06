@@ -1,0 +1,47 @@
+/* ---- 背景コンテナ（相対基準） ---- */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+/* ---- 背景画像（画面に合わせて伸縮） ---- */
+.bgImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.iconWrapper {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  /* 画像と背景の縮尺はここで統一 */
+  width: 3.3%;
+  height: auto;
+  pointer-events: none;
+}
+
+.iconWrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* 丸のサイズ */
+  width: 250%;
+  aspect-ratio: 1 / 1;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  z-index: 1;
+}
+
+/* 指アイコン本体 */
+.overlayImage {
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+  display: block;
+}
