@@ -1,0 +1,9 @@
+.background {
+  background-color: #697e2c;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("/images/shared/Genkan.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
