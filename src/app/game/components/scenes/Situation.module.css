@@ -19,7 +19,7 @@
   /* 画像と背景の縮尺はここで統一 */
   width: 3.3%;
   height: auto;
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 .iconWrapper::before {
