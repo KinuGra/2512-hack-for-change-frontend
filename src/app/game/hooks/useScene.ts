@@ -15,6 +15,7 @@ export const useScene = () => {
       shopping: "shopping/detail",
       water: "water/washbasin",
       aircon: "aircon/temp",
+      relax: "relax/laundry",
     };
 
     setSceneName(mapping[situation] ?? "shared/house");

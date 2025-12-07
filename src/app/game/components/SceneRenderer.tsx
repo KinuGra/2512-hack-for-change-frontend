@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from "react";
@@ -20,6 +21,11 @@ import Aircon_TempScene from "./scenes/aircon/Aircon_TempScene";
 import Aircon_CurtainScene from "./scenes/aircon/Aircon_CurtainScene";
 import Aircon_GoingOutScene from "./scenes/aircon/Aircon_GoingOutScene";
 import Aircon_FilterScene from "./scenes/aircon/Aircon_FilterScene";
+
+import Relax_LaundryScene from "./scenes/relax/Relax_LaundryScene";
+import Relax_ClimateScene from "./scenes/relax/Relax_ClimateScene";
+import Relax_LightingScene from "./scenes/relax/Relax_LightingScene";
+import Relax_BathScene from "./scenes/relax/Relax_BathScene";
 
 export type ShowPopupHelpers = {
   applyHarvestDelta: (d: number, action?: string) => void;
@@ -140,6 +146,22 @@ const SceneRenderer: React.FC<Props> = ({
     case "aircon/filter":
       return (
         <Aircon_FilterScene
+          goToScene={goToScene}
+          endSituation={endSituation}
+          showPopup={showPopup}
+        />
+      );
+
+    // Relax (New)
+    case "relax/laundry":
+      return <Relax_LaundryScene goToScene={goToScene} showPopup={showPopup} />;
+    case "relax/climate":
+      return <Relax_ClimateScene goToScene={goToScene} showPopup={showPopup} />;
+    case "relax/lighting":
+      return <Relax_LightingScene goToScene={goToScene} showPopup={showPopup} />;
+    case "relax/bath":
+      return (
+        <Relax_BathScene
           goToScene={goToScene}
           endSituation={endSituation}
           showPopup={showPopup}

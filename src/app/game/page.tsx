@@ -35,7 +35,9 @@ export default function GamePage() {
 
   // situations that can be chosen randomly
   // この配列からシチュエーションが抽選されます
-  const ALL_SITUATIONS: Array<string> = ["milk", "shopping", "water", "aircon"];
+  // const ALL_SITUATIONS: Array<string> = ["milk", "shopping", "water", "aircon", "relax"];
+  const ALL_SITUATIONS: Array<string> = ["milk", "shopping", "relax"];
+
 
   const startRandomSituation = useCallback(() => {
     // Filter out already played situations
