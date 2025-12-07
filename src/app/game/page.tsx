@@ -9,6 +9,7 @@ import HarvestStatus from "./components/HarvestStatus";
 import CutIn from "./components/CutIn";
 import FinalResult from "./components/FinalResult";
 import { useState } from "react";
+import Button from "@/components/Button";
 
 export default function GamePage() {
   const {
@@ -39,7 +40,9 @@ export default function GamePage() {
 
   const startRandomSituation = useCallback(() => {
     // Filter out already played situations
-    const available = ALL_SITUATIONS.filter((s) => !playedSituations.includes(s));
+    const available = ALL_SITUATIONS.filter(
+      (s) => !playedSituations.includes(s)
+    );
 
     if (available.length === 0) {
       // Should handle case where ran out of situations before game over (if logic aligns)
@@ -101,6 +104,9 @@ export default function GamePage() {
     return (
       <main>
         <HarvestStatus score={harvestPercent} />
+        <div
+          style={{ position: "absolute", top: 100, right: 10, zIndex: 1000 }}
+        ></div>
         <SceneRenderer
           sceneName={sceneName}
           goToScene={goToScene}
@@ -140,7 +146,7 @@ export default function GamePage() {
           totalScore={totalScore}
           harvestPercent={totalScore} // Merge: Final Harvest is the Cumulative Score
           logs={actionLogs}
-          onTitle={() => window.location.href = "/title"} // Simple redirect for now
+          onTitle={() => (window.location.href = "/title")} // Simple redirect for now
         />
       </main>
     );
