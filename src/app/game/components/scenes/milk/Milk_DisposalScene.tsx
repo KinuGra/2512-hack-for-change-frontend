@@ -74,7 +74,7 @@ export default function Milk_DisposalScene({
             {/* Background Image */}
             <div className={styles.backgroundImage}>
                 <Image
-                    src="/tmp.png" // Placeholder as requested
+                    src="/images/milk/Milk_DisposalScene.png"
                     alt="Milk Disposal"
                     fill
                     style={{ objectFit: "cover" }}
@@ -84,8 +84,8 @@ export default function Milk_DisposalScene({
             {/* Buttons */}
             {/* Position 1: Wash and Recycle */}
             <TouchButton
-                top="40%"
-                left="20%"
+                top="65%"
+                left="70%"
                 onClick={onWashClick}
                 label="洗ってリサイクル"
             />
@@ -100,7 +100,7 @@ export default function Milk_DisposalScene({
             {/* Position 3: Pour Leftover */}
             <TouchButton
                 top="65%"
-                left="45%"
+                left="40%"
                 onClick={() => {
                     if (!showPopup) return;
                     showPopup((hide, helpers) => (

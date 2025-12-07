@@ -32,8 +32,8 @@ export default function Milk_MarketScene({
       <Situation bg="/images/milk/Milk_MarketScene.png">
         {/* 左: 大きいミルク（賞味3日、廃棄リスク高め） */}
         <TouchButton
-          top="60%"
-          left="65%"
+          top="25%"
+          left="37%"
           onClick={() => {
             const delta = -10;
             const impactText =
@@ -63,7 +63,7 @@ export default function Milk_MarketScene({
                         hide();
                         showCutIn(beforeSrc, afterSrc);
                         setTimeout(() => {
-                          endSituation && endSituation();
+                          goToScene("milk/disposal");
                         }, SCENE_TRANSITION_DELAY);
                       }}
                     />
@@ -71,15 +71,15 @@ export default function Milk_MarketScene({
                 }
               );
             } else {
-              endSituation && endSituation();
+              goToScene("milk/disposal");
             }
           }}
         />
 
         {/* 右: 小さいミルク（賞味1週、廃棄リスク低め） */}
         <TouchButton
-          top="25%"
-          left="37%"
+          top="60%"
+          left="65%"
           onClick={() => {
             const delta = 10;
             const impactText =
@@ -118,7 +118,7 @@ export default function Milk_MarketScene({
                 }
               );
             } else {
-              endSituation && endSituation();
+              goToScene("milk/disposal");
             }
           }}
         />
