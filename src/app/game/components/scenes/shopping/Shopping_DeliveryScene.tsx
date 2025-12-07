@@ -49,17 +49,17 @@ export default function Shopping_DeliveryScene({
     return (
         <div className={styles.sceneContainer}>
             <div className={styles.backgroundImage}>
-                <Image src="/tmp.png" alt="Shopping Delivery" fill style={{ objectFit: "cover" }} />
+                <Image src="/images/shopping/Shopping_DeliveryScene.png" alt="Shopping Delivery" fill style={{ objectFit: "cover" }} />
             </div>
             <TouchButton
-                top="60%"
-                left="20%"
+                top="58%"
+                left="57%"
                 label="再配達"
                 onClick={createHandler(-30, "再配達は余分な走行距離と燃料消費を生み出します。", "再配達を依頼")}
             />
             <TouchButton
-                top="60%"
-                left="60%"
+                top="70%"
+                left="88%"
                 label="宅配ボックス"
                 onClick={createHandler(30, "宅配ボックスや置き配は、再配達を防ぎCO2排出を抑えます。", "宅配ボックスを利用")}
             />

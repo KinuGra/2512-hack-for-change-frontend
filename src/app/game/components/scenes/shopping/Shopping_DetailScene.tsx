@@ -49,17 +49,17 @@ export default function Shopping_DetailScene({
     return (
         <div className={styles.sceneContainer}>
             <div className={styles.backgroundImage}>
-                <Image src="/tmp.png" alt="Shopping Detail" fill style={{ objectFit: "cover" }} />
+                <Image src="/images/shopping/Shopping_DetailScene.png" alt="Shopping Detail" fill style={{ objectFit: "cover" }} />
             </div>
             <TouchButton
-                top="60%"
-                left="20%"
+                top="45%"
+                left="60%"
                 label="新品を購入"
                 onClick={createHandler(-30, "新品の製造には多くの資源とエネルギーが必要です。", "新品を購入")}
             />
             <TouchButton
-                top="60%"
-                left="60%"
+                top="35%"
+                left="40%"
                 label="中古/再生品"
                 onClick={createHandler(30, "中古・再生品の利用は資源採掘と製造エネルギーを節約します。", "中古/再生品を購入")}
             />      </div>
