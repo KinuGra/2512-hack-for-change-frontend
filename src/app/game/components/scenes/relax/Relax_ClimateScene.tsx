@@ -52,14 +52,14 @@ export default function Relax_ClimateScene({
                 <Image src="/images/relax/RelaxAtHome2.png" alt="Relax Climate" fill style={{ objectFit: "cover" }} />
             </div>
             <TouchButton
-                top="60%"
-                left="20%"
+                top="55%"
+                left="87%"
                 label="暖房のみ"
                 onClick={createHandler(-30, "暖房だけに頼ると、エネルギー消費が増大します。", "暖房のみ使用")}
             />
             <TouchButton
-                top="60%"
-                left="60%"
+                top="55%"
+                left="15%"
                 label="厚着する"
                 onClick={createHandler(30, "衣服で調整することで、暖房の設定温度を下げられ省エネです。", "厚着して調整")}
             />

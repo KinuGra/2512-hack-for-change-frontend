@@ -52,14 +52,14 @@ export default function Relax_LightingScene({
                 <Image src="/images/relax/RelaxAtHome3.png" alt="Relax Lighting" fill style={{ objectFit: "cover" }} />
             </div>
             <TouchButton
-                top="60%"
+                top="50%"
                 left="20%"
                 label="全部つける"
                 onClick={createHandler(-30, "誰もいない部屋の電気をつけると、無駄な電力を消費します。", "全室点灯")}
             />
             <TouchButton
-                top="60%"
-                left="60%"
+                top="55%"
+                left="80%"
                 label="こまめに消す"
                 onClick={createHandler(30, "必要な場所だけ点灯することで、効率的に電力を使えます。", "こまめに消灯")}
             />

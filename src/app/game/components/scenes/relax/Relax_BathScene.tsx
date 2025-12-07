@@ -52,13 +52,13 @@ export default function Relax_BathScene({
                 <Image src="/images/relax/ RelaxAtHome4.jpg" alt="Relax Bath" fill style={{ objectFit: "cover" }} />
             </div>
             <TouchButton
-                top="60%"
-                left="20%"
+                top="45%"
+                left="37%"
                 label="無駄遣い"
                 onClick={createHandler(-30, "シャワーの出しっぱなしや無駄な追い焚きは、多大な水とエネルギーを浪費します。", "お風呂で無駄遣い")}
             />
             <TouchButton
-                top="60%"
+                top="58%"
                 left="60%"
                 label="エコ運転"
                 onClick={createHandler(30, "こまめなシャワー停止や保温の工夫は、快適さと省エネを両立します。", "お風呂でエコ運転")}

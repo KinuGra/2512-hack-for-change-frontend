@@ -94,15 +94,11 @@ export default function Relax_LaundryScene({
                 <Image src="/images/relax/RelaxAtHome1.png" alt="Relax Laundry" fill style={{ objectFit: "cover" }} />
             </div>
 
-            <div style={{ position: "absolute", top: "10%", left: "10%", background: "rgba(255,255,255,0.8)", padding: "10px", borderRadius: "8px" }}>
-                <h3>洗濯の設定</h3>
-            </div>
-
             {/* Option 1: Eco Detergent */}
             {!selectedOptions.includes("detergent") && (
                 <TouchButton
-                    top="30%"
-                    left="20%"
+                    top="15%"
+                    left="50%"
                     label="エコ洗剤"
                     onClick={createHandler(20, "エコ洗剤は水質汚染を減らし、環境負荷を下げます。", "エコ洗剤", "detergent")}
                 />
@@ -111,8 +107,8 @@ export default function Relax_LaundryScene({
             {/* Option 2: Bulk Load */}
             {!selectedOptions.includes("load") && (
                 <TouchButton
-                    top="30%"
-                    left="60%"
+                    top="40%"
+                    left="50%"
                     label="まとめ洗い"
                     onClick={createHandler(20, "まとめ洗いは水と電気の使用効率を最大化します。", "まとめ洗い", "load")}
                 />
@@ -121,7 +117,7 @@ export default function Relax_LaundryScene({
             {/* Option 3: Nature Dry */}
             {!selectedOptions.includes("drying") && (
                 <TouchButton
-                    top="50%"
+                    top="60%"
                     left="40%"
                     label="自然乾燥"
                     onClick={createHandler(20, "自然乾燥は電力を使わず、CO2排出ゼロです。", "自然乾燥", "drying")}
@@ -130,7 +126,7 @@ export default function Relax_LaundryScene({
 
             {/* Confirm Button */}
             <TouchButton
-                top="80%"
+                top="75%"
                 left="80%"
                 label="決定"
                 onClick={() => {
