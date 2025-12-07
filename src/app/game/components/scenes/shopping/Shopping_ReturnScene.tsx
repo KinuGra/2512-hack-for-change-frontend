@@ -50,17 +50,17 @@ export default function Shopping_ReturnScene({
     return (
         <div className={styles.sceneContainer}>
             <div className={styles.backgroundImage}>
-                <Image src="/tmp.png" alt="Shopping Return" fill style={{ objectFit: "cover" }} />
+                <Image src="/images/shopping/Shopping_ReturnScene.png" alt="Shopping Return" fill style={{ objectFit: "cover" }} />
             </div>
             <TouchButton
-                top="60%"
-                left="20%"
+                top="40%"
+                left="47%"
                 label="個別返品"
                 onClick={createHandler(-30, "個別の返品は配送の無駄を増やし、環境負荷を高めます。", "個別に返品")}
             />
             <TouchButton
-                top="60%"
-                left="60%"
+                top="83%"
+                left="80%"
                 label="まとめて返品"
                 onClick={createHandler(30, "まとめて返品することで、輸送効率を改善しCO2を削減できます。", "まとめて返品")}
             />

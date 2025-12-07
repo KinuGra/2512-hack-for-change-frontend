@@ -53,7 +53,7 @@ export default function Shopping_OrderScene({
     return (
         <div className={styles.sceneContainer}>
             <div className={styles.backgroundImage}>
-                <Image src="/tmp.png" alt="Shopping Order" fill style={{ objectFit: "cover" }} />
+                <Image src="/images/shopping/Shopping_OrderScene.png" alt="Shopping Order" fill style={{ objectFit: "cover" }} />
             </div>
 
             <div style={{ position: "absolute", top: "10%", left: "10%", background: "rgba(255,255,255,0.8)", padding: "10px", borderRadius: "8px" }}>
@@ -63,8 +63,8 @@ export default function Shopping_OrderScene({
             {/* Option 1: Consolidated Delivery */}
             {!selectedOptions.includes("consolidated") && (
                 <TouchButton
-                    top="30%"
-                    left="20%"
+                    top="50%"
+                    left="35%"
                     label="まとめて配送"
                     onClick={createHandler(30, "配送回数を減らし、CO2排出を削減します。", "まとめて配送を利用", "consolidated")}
                 />
@@ -73,8 +73,8 @@ export default function Shopping_OrderScene({
             {/* Option 2: Eco Packing */}
             {!selectedOptions.includes("packing") && (
                 <TouchButton
-                    top="30%"
-                    left="60%"
+                    top="70%"
+                    left="75%"
                     label="エコ梱包"
                     onClick={createHandler(20, "資源の無駄遣いを減らす簡易梱包です。", "エコ梱包・電子明細", "packing")}
                 />
@@ -83,8 +83,8 @@ export default function Shopping_OrderScene({
             {/* Option 3: Digital Receipt */}
             {!selectedOptions.includes("receipt") && (
                 <TouchButton
-                    top="50%"
-                    left="40%"
+                    top="85%"
+                    left="62%"
                     label="電子領収書"
                     onClick={createHandler(10, "紙の無駄をなくす電子明細を選択しました。", "電子領収書を利用", "receipt")}
                 />
@@ -92,8 +92,8 @@ export default function Shopping_OrderScene({
 
             {/* Confirm / Next Button */}
             <TouchButton
-                top="80%"
-                left="80%"
+                top="50%"
+                left="60%"
                 label="注文確定"
                 onClick={() => {
                     if (!showPopup) {
